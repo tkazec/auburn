@@ -1,0 +1,15 @@
+body {
+	background: #260930;
+	margin: 50px auto;
+	position: relative;
+	width: 1100px;
+}
+
+.tile {
+	display: inline-block;
+	position: absolute;
+}
+.tile:hover {
+	box-shadow: 0px 0px 5px #FFF;
+	outline: 1px solid rgba(255, 255, 255, 0.6);
+}
