@@ -1,0 +1,16 @@
+{
+	"name": "Auburn",
+	"version": "0.1",
+	"description": "A beautiful, speedy, fully customizable, tile-based new tab page.",
+	"icons": {
+		"48": "icons/48.png",
+		"128": "icons/128.png"
+	},
+	"background_page": "background.html",
+	"chrome_url_overrides": {
+		"newtab": "tab.html"
+	},
+	"offline_enabled": true,
+	"options_page": "options.html",
+	"permissions": []
+}
