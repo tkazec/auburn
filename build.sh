@@ -13,8 +13,4 @@ echo "<style>`cat css/html5-reset.css css/tab.css | yuicompressor --type css`</s
 sed -i '' -e '/<link/d' -e '/<\/title>/r css/tab.css' tab.html
 rm css/tab.css
 
-echo "<script>`closure --language_in ECMASCRIPT5 --js js/tab.js`</script>" > js/tab.js
-sed -i '' -e '/.*<script.*/{r js/tab.js' -e 'd;}' tab.html
-rm js/tab.js
-
 find . -path '*/.*' -prune -o -type f -print | zip $OUTZIP -@
