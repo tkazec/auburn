@@ -8,7 +8,7 @@
 	</head>
 	<body>
 		<script>
-		document.documentElement.replaceChild(chrome.extension.getBackgroundPage().tabbody, document.body);
+		document.documentElement.replaceChild(document.importNode(chrome.extension.getBackgroundPage().tabbody, true), document.body);
 		</script>
 	</body>
 </html>
