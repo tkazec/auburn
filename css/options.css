@@ -1,7 +1,39 @@
+a {
+	cursor: pointer;
+}
+
+body {
+	background-color: #EEE;
+	padding-top: 40px;
+}
+
+body > .container {
+	display: none;
+}
+body > .container.active {
+	display: block;
+}
+
+.container {
+	width: 820px;
+}
+
+.content {
+	background-color: #FFF;
+	padding: 20px;
+	margin: 0 -20px;
+	border-radius: 0 0 6px 6px;
+	box-shadow: 0 1px 2px rgba(0,0,0,.15);
+}
+
 #topbar-logo {
 	font-family: "Open Sans", sans-serif;
 }
 #topbar-logo-image {
-	margin-right: 1px;
+	margin-right: 2px;
 	vertical-align: bottom;
+}
+
+#theme {
+	font-family: "DejaVu Sans Mono", monospace;
 }
