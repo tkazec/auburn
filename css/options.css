@@ -37,3 +37,6 @@ body > .container.active {
 #theme {
 	font-family: "DejaVu Sans Mono", monospace;
 }
+#theme-save {
+	float: right;
+}
