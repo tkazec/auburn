@@ -1,7 +1,10 @@
+(function(){
+"use strict";
+
 /*** tabs ***/
 var tabs = {
-	$logo: $("#topbar-logo"),
-	$buttons: $("#topbar-tabs").children(),
+	$logo: $("#navbar-logo"),
+	$buttons: $("#navbar-tabs").children(),
 	$pages: $("body").children(".container"),
 	change: function(i) {
 		tabs.$buttons.eq(i).add(tabs.$pages.eq(i)).addClass("active").siblings().removeClass("active");
@@ -11,7 +14,7 @@ var tabs = {
 tabs.change(0);
 
 tabs.$logo.click(function(){
-	tabs.change(4);
+	tabs.change(3);
 });
 
 tabs.$buttons.click(function(){
@@ -36,3 +39,5 @@ theme.$save.click(function(){
 		theme.$save.prop("disabled", false);
 	});
 }).click();
+
+})();

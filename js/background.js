@@ -1,9 +1,18 @@
-"use strict";
 (function(){
-	
-// x, y, width, height
-// background, image
-// href, app, content
+"use strict";
+
+/*
+if (!localStorage.version) {
+	localStorage.background = "#260930";
+	localStorage.guides = 5;
+	localStorage.height = 450;
+	localStorage.html = "";
+	localStorage.theme = "";
+	localStorage.width = 950;
+}
+
+localStorage.version = cversion;
+*/
 
 var tiles = {
 	0: {

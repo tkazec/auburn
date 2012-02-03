@@ -3,18 +3,16 @@
 	<head>
 		<meta charset="utf8">
 		<title>Auburn</title>
-		<link rel="stylesheet" href="css/html5-reset.css">
 		<link rel="stylesheet" href="css/bootstrap.css">
 		<link rel="stylesheet" href="css/options.css">
 	</head>
 	<body>
-		<div class="topbar">
-			<div class="fill">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
 				<div class="container">
-					<a id="topbar-logo" class="brand"><img src="icons/16.png" width="16" height="16" alt="" id="topbar-logo-image">auburn</a>
-					<ul id="topbar-tabs" class="nav">
+					<a id="navbar-logo" class="brand"><img src="icons/16.png" width="16" height="16" alt="" id="navbar-logo-image">auburn</a>
+					<ul id="navbar-tabs" class="nav">
 						<li><a>Tiles</a>
-						<li><a>Layout</a>
 						<li><a>Theme</a>
 						<li><a>Help</a>
 						<li><a>About</a>
@@ -24,44 +22,29 @@
 		</div>
 		
 		<div class="container">
-			<div class="content">
-				<p>omg, the tiles editor!</p>
-			</div>
+			<p>omg, the tiles editor!</p>
 		</div>
 		
 		<div class="container">
-			<div class="content">
-				<p>omg, the layout editor!</p>
-			</div>
+			<button id="theme-save" class="btn btn-large btn-primary">Save changes</button>
+			
+			<p>Modify Auburn's look and feel with <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
+			
+			<p id="theme-help" class="help-block">Not for the faint of heart. Advanced users should take a look at the <a href="https://github.com/tkazec/auburn/blob/master/css/tab.css" target="_blank">default styles</a>.</p>
+			<textarea rows="20" id="theme" class="span12"></textarea>
 		</div>
 		
 		<div class="container">
-			<div class="content">
-				<button id="theme-save" class="btn large primary">Save changes</button>
-				
-				<p>Modify Auburn's look and feel with <abbr title="Cascading Style Sheets">CSS</abbr>.</p>
-				
-				<span id="theme-help" class="help-block">Not for the faint of heart. Advanced users should take a look at the <a href="https://github.com/tkazec/auburn/blob/master/css/tab.css" target="_blank">default styles</a>.</span>
-				<textarea rows="20" id="theme" class="span14"></textarea>
-			</div>
+			<p>Why do you need help? Auburn is easy!</p>
 		</div>
 		
 		<div class="container">
-			<div class="content">
-				<p>Why do you need help? Auburn is easy!</p>
-			</div>
-		</div>
-		
-		<div class="container">
-			<div class="content">
-				<p>We're awesome.</p>
-				
-				<h2>Changelog</h2>
-				<h3>0.1 <small>2011-12-01</small></h3>
-				<ul>
-					<li>Private beta release.
-				</ul>
-			</div>
+			<p>We're awesome.</p>
+			
+			<h3>0.1.0 <small>2011-12-01</small></h3>
+			<ul>
+				<li>Private beta release.
+			</ul>
 		</div>
 		
 		<script src="js/jquery.js"></script>
