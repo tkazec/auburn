@@ -9,7 +9,7 @@
 		"128": "images/icons/128.png"
 	},
 	"background": {
-		"scripts": ["scripts/background.js"]
+		"scripts": ["scripts/data.js", "scripts/background.js"]
 	},
 	"chrome_url_overrides": {
 		"newtab": "tab.html"
