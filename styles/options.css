@@ -1,3 +1,4 @@
+/*** global ***/
 a {
 	cursor: pointer;
 }
@@ -25,20 +26,19 @@ body > .container > :last-child {
 	margin-bottom: 0;
 }
 
-#navbar-logo {
+
+/*** nav ***/
+#nav-logo {
+	color: #FFF;
 	font-family: "Open Sans", sans-serif;
 }
-#navbar-logo-image {
+#nav-logo > img {
 	margin-right: 2px;
 	vertical-align: bottom;
 }
 
+
+/*** theme page ***/
 #theme {
 	font-family: "DejaVu Sans Mono", monospace;
-}
-#theme-help {
-	margin-top: -3px;
-}
-#theme-save {
-	float: right;
 }
