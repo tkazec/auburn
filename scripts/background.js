@@ -1,20 +1,16 @@
-(function(){
-"use strict";
+(function () { "use strict";
 
-/*
-if (!localStorage.version) {
-	localStorage.background = "#260930";
-	localStorage.guides = 5;
-	localStorage.height = 450;
-	localStorage.html = "";
-	localStorage.theme = "";
-	localStorage.width = 950;
-}
+/*** setup ***/
+var version = "0.1.0";
 
-localStorage.version = cversion;
-*/
+Data.def("tiles", {});
+Data.def("theme", "");
 
-var tiles = {
+Data.set("version", version);
+
+
+/*** tab ***/
+Data.set("tiles", {
 	0: {
 		x: 0,
 		y: 0,
@@ -68,10 +64,11 @@ var tiles = {
 		background: "hotpink",
 		content: "<p>Hello!</p>"
 	}
-};
+});
 
-var buildtabbody = window.buildtabbody = function(){
-	var tabbody = window.tabbody = document.createElement("body")
+var buildtabbody = window.buildtabbody = function () {
+	var tiles = Data.get("tiles");
+	var tabbody = window.tabbody = document.createElement("body");
 	
 	Object.keys(tiles).forEach(function(k){
 		var data = tiles[k],
@@ -96,8 +93,6 @@ var buildtabbody = window.buildtabbody = function(){
 	});
 };
 
-
-/*** setup ***/
 buildtabbody();
 
 })();

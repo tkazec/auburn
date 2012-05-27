@@ -10,8 +10,6 @@ var tabs = {
 	}
 };
 
-tabs.change(0);
-
 tabs.$logo.click(function () {
 	tabs.change(3);
 });
@@ -20,6 +18,8 @@ tabs.$buttons.click(function () {
 	tabs.change($(this).index());
 });
 
+tabs.change(0);
+
 
 /*** theme ***/
 var theme = {
@@ -27,10 +27,10 @@ var theme = {
 	$save: $("#theme-save")
 };
 
-theme.$text.val(localStorage.theme);
+theme.$text.val(Data.get("theme"));
 
 theme.$save.click(function () {
-	localStorage.theme = theme.$text.val();
+	Data.set("theme", theme.$text.val());
 	
 	theme.$save.prop("disabled", true);
 	
