@@ -21,7 +21,7 @@ var tiles = {
 		width: 4,
 		height: 2,
 		background: "lime",
-		image: "icons/128.png"
+		image: "images/icons/128.png"
 	},
 	1: {
 		x: 4,
@@ -43,7 +43,7 @@ var tiles = {
 		width: 1,
 		height: 1,
 		background: "yellow",
-		image: "icons/48.png",
+		image: "images/icons/48.png",
 		href: "http://tkaz.ec"
 	},
 	4: {
