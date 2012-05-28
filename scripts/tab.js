@@ -1,1 +1,1 @@
-document.documentElement.replaceChild(document.importNode(chrome.extension.getBackgroundPage().tabbody, true), document.body);
+document.documentElement.replaceChild(document.importNode(chrome.extension.getBackgroundPage().state.tab, true), document.body);

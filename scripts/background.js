@@ -9,7 +9,7 @@ Data.def("theme", "");
 Data.set("version", version);
 
 
-/*** tab ***/
+/*** state ***/
 Data.set("tiles", {
 	0: {
 		x: 0,
@@ -66,33 +66,37 @@ Data.set("tiles", {
 	}
 });
 
-var buildtabbody = window.buildtabbody = function () {
-	var tiles = Data.get("tiles");
-	var tabbody = window.tabbody = document.createElement("body");
-	
-	Object.keys(tiles).forEach(function(k){
-		var data = tiles[k],
-			el = document.createElement(data.href ? "a" : "div"),
-			backgrounds = [];
+var state = window.state = {
+	tab: null,
+	build: function () {
+		var tiles = Data.get("tiles");
 		
-		el.style.left = ((100 + 10) * data.x) + "px";
-		el.style.top = ((100 + 10) * data.y) + "px";
+		state.tab = document.createElement("body");
 		
-		el.style.width = (100 * data.width) + (10 * (data.width - 1)) + "px";
-		el.style.height = (100 * data.height) + (10 * (data.height - 1)) + "px";
-		
-		data.image && backgrounds.push('url("' + data.image + '") center no-repeat');
-		data.background && backgrounds.push(data.background);
-		el.style.background = backgrounds.join(", ");
-		
-		data.href && el.setAttribute("href", data.href);
-		data.content && (el.innerHTML = data.content);
-		
-		el.className = "tile";
-		tabbody.appendChild(el);
-	});
+		Object.keys(tiles).forEach(function (k) {
+			var data = tiles[k];
+			var el = document.createElement(data.href ? "a" : "div");
+			var backgrounds = [];
+			
+			el.style.left = ((100 + 10) * data.x) + "px";
+			el.style.top = ((100 + 10) * data.y) + "px";
+			
+			el.style.width = (100 * data.width) + (10 * (data.width - 1)) + "px";
+			el.style.height = (100 * data.height) + (10 * (data.height - 1)) + "px";
+			
+			data.image && backgrounds.push('url("' + data.image + '") center no-repeat');
+			data.background && backgrounds.push(data.background);
+			el.style.background = backgrounds.join(", ");
+			
+			data.href && el.setAttribute("href", data.href);
+			data.content && (el.innerHTML = data.content);
+			
+			el.className = "tile";
+			state.tab.appendChild(el);
+		});
+	}
 };
 
-buildtabbody();
+state.build();
 
 })();
