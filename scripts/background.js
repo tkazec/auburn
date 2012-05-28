@@ -46,23 +46,44 @@ Data.set("tiles", {
 		x: 1,
 		y: 3,
 		width: 1,
-		height: 1,
+		height: 2,
 		background: "red"
 	},
 	5: {
 		x: 2,
 		y: 2,
 		width: 4,
-		height: 2,
+		height: 3,
 		background: "grey"
 	},
 	6: {
 		x: 6,
 		y: 0,
-		width: 4,
+		width: 3,
 		height: 4,
 		background: "hotpink",
 		content: "<p>Hello!</p>"
+	},
+	7: {
+		x: 0,
+		y: 4,
+		width: 1,
+		height: 1,
+		background: "cyan"
+	},
+	8: {
+		x: 6,
+		y: 4,
+		width: 3,
+		height: 1,
+		background: "aqua"
+	},
+	9: {
+		x: 9,
+		y: 0,
+		width: 1,
+		height: 5,
+		background: "green"
 	}
 });
 
@@ -78,11 +99,11 @@ var state = window.state = {
 			var el = document.createElement(data.href ? "a" : "div");
 			var backgrounds = [];
 			
-			el.style.left = ((100 + 10) * data.x) + "px";
-			el.style.top = ((100 + 10) * data.y) + "px";
+			el.style.left = ((12.5 + 1.5) * data.x) + 0.75 + "vh";
+			el.style.top = ((12.5 + 1.5) * data.y) + 0.75 + "vh";
 			
-			el.style.width = (100 * data.width) + (10 * (data.width - 1)) + "px";
-			el.style.height = (100 * data.height) + (10 * (data.height - 1)) + "px";
+			el.style.width = (12.5 * data.width) + (1.5 * (data.width - 1)) + "vh";
+			el.style.height = (12.5 * data.height) + (1.5 * (data.height - 1)) + "vh";
 			
 			data.image && backgrounds.push('url("' + data.image + '") center no-repeat');
 			data.background && backgrounds.push(data.background);

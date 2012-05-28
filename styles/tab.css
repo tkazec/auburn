@@ -1,8 +1,8 @@
 body {
 	background: #260930;
-	margin: 50px auto;
+	height: 70vh;
+	margin: 15vh 10vw;
 	position: relative;
-	width: 1100px;
 }
 
 .tile {
