@@ -99,11 +99,11 @@ var state = window.state = {
 			var el = document.createElement(data.href ? "a" : "div");
 			var backgrounds = [];
 			
-			el.style.left = ((12.5 + 1.5) * data.x) + 0.75 + "vh";
-			el.style.top = ((12.5 + 1.5) * data.y) + 0.75 + "vh";
+			el.style.left = ((7.2 + 0.8) * data.x) + 0.4 + "vw";
+			el.style.top = ((7.2 + 0.8) * data.y) + 0.4 + "vw";
 			
-			el.style.width = (12.5 * data.width) + (1.5 * (data.width - 1)) + "vh";
-			el.style.height = (12.5 * data.height) + (1.5 * (data.height - 1)) + "vh";
+			el.style.width = (7.2 * data.width) + (0.8 * (data.width - 1)) + "vw";
+			el.style.height = (7.2 * data.height) + (0.8 * (data.height - 1)) + "vw";
 			
 			data.image && backgrounds.push('url("' + data.image + '") center no-repeat');
 			data.background && backgrounds.push(data.background);

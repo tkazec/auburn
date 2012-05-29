@@ -1,9 +1,9 @@
 body {
 	background: #260930;
-	height: 70vh;
-	margin: 15vh auto;
+	height: 40vw;
+	margin: 10vh auto; /* TODO -webkit-calc(25vh - 20vw) */
 	position: relative;
-	width: 140vh;
+	width: 80vw;
 }
 
 .tile {
