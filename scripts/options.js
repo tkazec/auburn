@@ -21,6 +21,10 @@ tabs.$buttons.click(function () {
 tabs.change(0);
 
 
+/*** tiles ***/
+$("#tiles").replaceWith(document.importNode(chrome.extension.getBackgroundPage().state.tab, true));
+
+
 /*** theme ***/
 var theme = {
 	$text: $("#theme"),
