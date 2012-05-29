@@ -97,13 +97,15 @@ var state = window.state = {
 		Object.keys(tiles).forEach(function (k) {
 			var data = tiles[k];
 			var el = document.createElement(data.href ? "a" : "div");
+			var cell = 7.2;
+			var gutter = 0.8;
 			var backgrounds = [];
 			
-			el.style.left = ((7.2 + 0.8) * data.x) + 0.4 + "vw";
-			el.style.top = ((7.2 + 0.8) * data.y) + 0.4 + "vw";
+			el.style.left = ((cell + gutter) * data.x) + (gutter / 2) + "vw";
+			el.style.top = ((cell + gutter) * data.y) + (gutter / 2) + "vw";
 			
-			el.style.width = (7.2 * data.width) + (0.8 * (data.width - 1)) + "vw";
-			el.style.height = (7.2 * data.height) + (0.8 * (data.height - 1)) + "vw";
+			el.style.width = (cell * data.width) + (gutter * (data.width - 1)) + "vw";
+			el.style.height = (cell * data.height) + (gutter * (data.height - 1)) + "vw";
 			
 			data.image && backgrounds.push('url("' + data.image + '") center no-repeat');
 			data.background && backgrounds.push(data.background);
