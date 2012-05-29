@@ -4,7 +4,9 @@
 var version = "0.1.0";
 
 Data.def("tiles", {});
-Data.def("theme", "");
+
+Data.def("theme-type", "dark");
+Data.def("theme-css", "");
 
 Data.set("version", version);
 
@@ -94,11 +96,12 @@ var state = window.state = {
 		
 		state.tab = document.createElement("body");
 		state.tab.id = "tiles";
+		state.tab.dataset.theme = Data.get("theme-type");
 		
 		state.tab.appendChild(function () {
 			var el = document.createElement("style");
 			el.scoped = true;
-			el.innerHTML = "@import url('styles/tab.css');";
+			el.innerHTML = "@import url('styles/tab.css');" + Data.get("theme-css");
 			return el;
 		}());
 		

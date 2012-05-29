@@ -31,10 +31,10 @@ var theme = {
 	$save: $("#theme-save")
 };
 
-theme.$text.val(Data.get("theme"));
+theme.$text.val(Data.get("theme-css"));
 
 theme.$save.click(function () {
-	Data.set("theme", theme.$text.val());
+	Data.set("theme-css", theme.$text.val());
 	
 	theme.$save.prop("disabled", true);
 	
