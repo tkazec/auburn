@@ -93,6 +93,14 @@ var state = window.state = {
 		var tiles = Data.get("tiles");
 		
 		state.tab = document.createElement("body");
+		state.tab.id = "tiles";
+		
+		state.tab.appendChild(function () {
+			var el = document.createElement("style");
+			el.scoped = true;
+			el.innerHTML = "@import url('styles/tab.css');";
+			return el;
+		}());
 		
 		Object.keys(tiles).forEach(function (k) {
 			var data = tiles[k];
