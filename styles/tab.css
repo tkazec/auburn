@@ -20,13 +20,13 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 }
 
 
-/*** dark ***/
-#tiles[data-theme="dark"] {
-	background: #260930;
-}
-
-
 /*** light ***/
 #tiles[data-theme="light"] {
 	background: #FFF;
+}
+
+
+/*** dark ***/
+#tiles[data-theme="dark"] {
+	background: #260930;
 }
