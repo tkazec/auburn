@@ -5,7 +5,16 @@ var background = chrome.extension.getBackgroundPage();
 
 
 /*** tiles ***/
-$("#tiles").prop("src", "tab.html");
+var tiles = {
+	$frame: $("#tiles"),
+	sync: function () {
+		background.state.build();
+		
+		tiles.$frame.prop("src", "tab.html");
+	}
+};
+
+tiles.sync();
 
 
 /*** theme ***/
@@ -17,6 +26,8 @@ var theme = {
 
 theme.$type.click(function () {
 	Data.set("theme-type", this.value);
+	
+	tiles.sync();
 }).filter("[value='" + Data.get("theme-type") + "']").addClass("active");
 
 theme.$css.val(Data.get("theme-css"));
@@ -29,6 +40,8 @@ theme.$save.click(function () {
 	theme.$css.one("keydown", function () {
 		theme.$save.prop("disabled", false);
 	});
+	
+	tiles.sync();
 }).click();
 
 })();
