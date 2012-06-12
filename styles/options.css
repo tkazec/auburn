@@ -3,26 +3,11 @@ a {
 	cursor: pointer;
 }
 
-body {
-	background-color: #EEE;
-	padding-top: 40px;
-}
-
-body > .container {
+.modal {
 	display: none;
 }
-body > .container.active {
-	display: block;
-}
 
-body > .container {
-	background: #FFF;
-	padding: 20px;
-	border-radius: 0 0 6px 6px;
-	box-shadow: inset 1px -1px 0 rgba(0, 0, 0, 0.1), inset -1px 0 0 rgba(0, 0, 0, 0.1);
-}
-
-body > .container > :last-child {
+.modal-body > :last-child {
 	margin-bottom: 0;
 }
 
@@ -38,7 +23,22 @@ body > .container > :last-child {
 }
 
 
-/*** theme page ***/
-#theme {
+/*** layout ***/
+#root {
+	padding-top: 40px;
+}
+
+
+/*** theme ***/
+#theme-type {
+	margin-bottom: 9px;
+}
+#theme-type > button {
+	width: 50%;
+}
+
+#theme-css {
+	box-sizing: border-box;
 	font-family: "DejaVu Sans Mono", monospace;
+	width: 100%;
 }

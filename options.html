@@ -6,48 +6,73 @@
 		<link rel="stylesheet" href="styles/bootstrap.css">
 		<link rel="stylesheet" href="styles/options.css">
 	</head>
-	<body>
+	<body id="root">
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
-				<div class="container">
+				<div class="container-fluid">
 					<a class="brand" id="nav-logo"><img src="images/icons/16.png" width="16" height="16" alt="">auburn</a>
 					
 					<ul class="nav" id="nav-tabs">
-						<li><a>Tiles</a>
-						<li><a>Theme</a>
-						<li><a>Help</a>
-						<li><a>About</a>
+						<li class="active"><a>Tiles</a>
+						<li><a data-toggle="modal" href="#theme">Theme</a>
+						<li><a data-toggle="modal" href="#help">Help</a>
+						<li><a data-toggle="modal" href="#about">About</a>
 					</ul>
 				</div>
 			</div>
 		</div>
 		
-		<div class="container">
-			<div id="tiles"></div>
+		<div id="tiles"></div>
+		
+		<div class="modal fade" id="theme">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal">×</button>
+    			<h3>Theme</h3>
+			</div>
+			
+			<div class="modal-body">
+				<div class="btn-group" id="theme-type" data-toggle="buttons-radio">
+					<button class="btn btn-large btn-info" value="light">Light</button>
+					<button class="btn btn-large btn-inverse" value="dark">Dark</button>
+				</div>
+				
+				<p>Advanced users can modify Auburn's look and feel with CSS.</p>
+				
+				<textarea id="theme-css" rows="15"></textarea>
+				
+				<button class="btn btn-primary pull-right" id="theme-save">Save</button>
+			</div>
 		</div>
 		
-		<div class="container">
-			<button class="btn btn-mini btn-primary pull-right" id="theme-save">Save</button>
+		<div class="modal fade" id="help">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal">×</button>
+    			<h3>Help</h3>
+			</div>
 			
-			<p>Modify Auburn's look and feel with <abbr title="Cascading Style Sheets">CSS</abbr>. Not for the faint of heart. Advanced users should take a look at the <a href="styles/tab.css" target="_blank">default styles</a>.</p>
-			
-			<textarea rows="20" id="theme" class="span12"></textarea>
+			<div class="modal-body">
+				<p>Why do you need help? Auburn is easy!</p>
+			</div>
 		</div>
 		
-		<div class="container">
-			<p>Why do you need help? Auburn is easy!</p>
-		</div>
-		
-		<div class="container">
-			<p>We're awesome.</p>
+		<div class="modal fade" id="about">
+			<div class="modal-header">
+				<button class="close" data-dismiss="modal">×</button>
+    			<h3>About</h3>
+			</div>
 			
-			<h3>0.1.0 <small>2011-12-01</small></h3>
-			<ul>
-				<li>Private beta release.
-			</ul>
+			<div class="modal-body">
+				<p>We're awesome.</p>
+				
+				<h4>0.1.0 <small>2011-12-01</small></h4>
+				<ul>
+					<li>Private beta release.
+				</ul>
+			</div>
 		</div>
 		
 		<script src="scripts/jquery.js"></script>
+		<script src="scripts/bootstrap.js"></script>
 		<script src="scripts/data.js"></script>
 		<script src="scripts/options.js"></script>
 	</body>
