@@ -3,7 +3,7 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 
 /*** global ***/
-#tiles {
+body {
 	height: 40vw;
 	margin: 10vh auto; /* TODO -webkit-calc(25vh - 20vw) */
 	position: relative;
@@ -17,22 +17,22 @@ html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address
 
 
 /*** light ***/
-#tiles[data-theme="light"] {
+body[data-theme="light"] {
 	background: #FFF;
 }
 
-#tiles[data-theme="light"] > .tile:hover {
+body[data-theme="light"] > .tile:hover {
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(82, 168, 236, 0.6);
 	outline: 1px solid rgba(82, 168, 236, 0.8);
 }
 
 
 /*** dark ***/
-#tiles[data-theme="dark"] {
+body[data-theme="dark"] {
 	background: #260930;
 }
 
-#tiles[data-theme="dark"] > .tile:hover {
+body[data-theme="dark"] > .tile:hover {
 	box-shadow: 0px 0px 5px #FFF;
 	outline: 1px solid rgba(255, 255, 255, 0.8);
 }

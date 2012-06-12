@@ -95,7 +95,6 @@ var state = window.state = {
 		var tiles = Data.get("tiles");
 		
 		state.tab = document.createElement("body");
-		state.tab.id = "tiles";
 		state.tab.dataset.theme = Data.get("theme-type");
 		
 		state.tab.appendChild(function () {
