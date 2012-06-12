@@ -100,7 +100,6 @@ var state = window.state = {
 		
 		state.tab.appendChild(function () {
 			var el = document.createElement("style");
-			el.scoped = true;
 			el.innerHTML = "@import url('styles/tab.css');" + Data.get("theme-css");
 			return el;
 		}());

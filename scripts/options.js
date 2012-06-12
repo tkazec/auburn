@@ -5,7 +5,7 @@ var background = chrome.extension.getBackgroundPage();
 
 
 /*** tiles ***/
-$("#tiles").replaceWith(document.importNode(background.state.tab, true));
+$("#tiles").prop("src", "tab.html");
 
 
 /*** theme ***/
