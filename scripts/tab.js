@@ -3,7 +3,7 @@
 var background;
 
 console.mark = function () {
-	this.log.apply(this, [window.performance.webkitNow().toFixed(10), ":"].concat(Array.prototype.slice.call(arguments)));
+	this.log.apply(this, [window.performance.now().toFixed(10), ":"].concat(Array.prototype.slice.call(arguments)));
 };
 
 console.mark("Spinning up...");
